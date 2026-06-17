@@ -16,7 +16,8 @@ It also retains support for the original Physics-IQ benchmark for comparison wit
 
 
 Original Physics-IQ website: [physics-iq.github.io](https://physics-iq.github.io/)<br>
-Physics-IQ Verified website: TBD
+Physics-IQ Verified website: Will be release soon!
+<!-- TODO: Update after download. -->
 
 ### Key Features:
 - **Real-world videos**: All videos are captured with high-quality cameras, not rendered.
@@ -42,7 +43,6 @@ The best possible score on Physics-IQ is 100.0%, this score would be achieved by
 ### Physics-IQ Verified Leaderboard
 If you test your model on Physics-IQ and would like your score/paper/model to be featured here in this table, feel free to open a pull request that adds a row to the table and we'll be happy to include it!
 
-For details on the Physics-IQ Verified metrics, see the [metric definitions](docs/metric_definition_phys_iq_verified.pdf). The full Physics-IQ Verified report will be published soon.
 
 > **Note:** We are still figuring out the reporting settings. Inclusion means that the authors get access to the API including relevant credits to reproduce the results by generating videos themselves. Videos should be made available to the authors at minimum. This will be updated to make results as reproducible as possible.
 
@@ -108,8 +108,8 @@ Choose one benchmark:
 
 ### A. Download Physics-IQ Verified
 
-Download the verified benchmark from the [Physics-IQ Verified Google Cloud Storage link](https://drive.google.com/file/d/1K7sRbks4VNqmpejyB9K7nIl4XcNpNWzk/view).
-<!-- TODO: Add our Download link here.-->
+Download the verified benchmark from the [Physics-IQ Verified Google Cloud Storage link](https://drive.google.com/file/d/1fRmvaMKJFUsKvXVKxtychGky1nd6KuTB/view).
+<!-- TODO: Add link to Huggingface.-->
 
 Ensure you have downloaded and placed the `physics-IQ-benchmark-verified` dataset in your working directory. This dataset must include 30FPS videos and can optionally include your desired FPS. If you downloaded the dataset from the link above, it should contain all provided FPS variants (30FPS, 24FPS, 16FPS, 8FPS). If your desired FPS does not exist in the dataset already, it will be automatically generated. The folder should have the following structure:
 
@@ -194,7 +194,7 @@ Physics-IQ Verified uses two prompt settings:
 
 **C3. Existing templates.**
 
-The base descriptions are in `descriptions/descriptions_original.csv`. For models with specific prompting guidelines, model-optimised descriptions are available in `descriptions/model_specific/`:
+For the bpp settings, the base templated descriptions can be found in `descriptions/model_specific/descriptions_base`. For models with specific prompting guidelines, model-optimised descriptions can be generated using `uv run generate_descriptions.py {model_name}`:
 
 | File | Optimised for |
 |---|---|
